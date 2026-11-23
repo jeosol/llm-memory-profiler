@@ -1,0 +1,9 @@
+torch
+#lightning
+matplotlib
+#pandas
+#torchmetrics
+#watermark
+transformers
+datasets
+
