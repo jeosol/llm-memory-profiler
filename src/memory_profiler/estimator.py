@@ -110,6 +110,19 @@ if __name__ == "__main__":
     print("--- Baseline BF16 (No Sharding) ---")
     print(estimator.estimate(llama3_8b, seq_len=4096, micro_batch_size=2))
 
+    print("\n--- ZeRO-3 + CPU Optimizer Offload + Activation Checkpoint - Use Flash Attention  ---")
+    print(
+        estimator.estimate(
+            llama3_8b,
+            seq_len=4096,
+            micro_batch_size=2,
+            zero_stage=3,
+            offload_optimizer=True,
+            activation_checkpointing=True,
+            use_flash_attention=False,
+        )
+    )
+        
     print("\n--- ZeRO-3 + CPU Optimizer Offload + Activation Checkpointing ---")
     print(
         estimator.estimate(
