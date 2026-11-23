@@ -1,3 +1,7 @@
+# This Python script implements the exact static (2N + 2N + 12N) and dynamic
+# activation formulas from DeepMind's Scaling Book to predict VRAM requirements
+# before execution
+
 from dataclasses import dataclass
 from typing import Literal
 from pydantic import BaseModel, Field
