@@ -23,6 +23,9 @@ appversion:
 
 run-estimator:
 	python ./src/memory_profiler/estimator.py
+
+run-smoke-test:
+	python ./src/test_smoke.py
 #
 # docker business
 # 
