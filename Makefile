@@ -37,9 +37,6 @@ build-image: build
 run:
 	docker run \
 	--network=host \
-	--env RABBITMQ_DEFAULT_USER=${RABBITMQ_DEFAULT_USER} \
-	--env RABBITMQ_DEFAULT_PASS=${RABBITMQ_DEFAULT_PASS} \
-	--env RABBITMQ_DEFAULT_HOSTNAME=${RABBITMQ_DEFAULT_HOSTNAME} \
 	--rm -it --name ${NAME_} -p 80:80 ${NAME_}:${COMMIT_ID}
 cbuild:
 	docker-compose build
