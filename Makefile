@@ -20,6 +20,9 @@ COMMIT_ID=$(shell git --work-tree=./ --git-dir=./.git rev-parse --short=${HASHLE
 
 appversion:
 	echo ${COMMIT_ID}
+
+run-estimator:
+	python ./src/memory_profiler/estimator.py
 #
 # docker business
 # 
