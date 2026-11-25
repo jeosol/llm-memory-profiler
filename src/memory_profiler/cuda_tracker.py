@@ -57,6 +57,7 @@ class CudaMemoryTracker:
         torch.cuda.reset_peak_memory_stats(self.device)
         t0 = time.perf_counter()
 
+        # Pause and hand control to the 'with' block
         yield
 
         torch.cuda.synchronize(self.device)
