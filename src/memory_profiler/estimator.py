@@ -14,7 +14,7 @@ class ModelSpec(BaseModel):
     hidden_size: int = Field(..., gt=0)
     num_attention_heads: int = Field(..., gt=0)
 
-
+# @dataclass used to make classes that primary store data much cleaner and less repetitive to write
 @dataclass
 class MemoryBreakdown:
     weights_gb: float
